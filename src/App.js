@@ -1,11 +1,23 @@
-import React from 'react';
-import WeatherLocation from './components/WeatherLocation'
-function App() {
-  return (
+import React, {Component} from 'react';
+import LocationList from './components/LocationList'
+
+const cities = [
+     'Mexicali,mx',
+     'Madrid,es',
+     'Riverside,us',
+     'Paris,fr',
+     'Berlin,De',
+     'Michigan,us',
+]
+
+class App extends Component {
+  render(){
+   return (
     <div>
-          <WeatherLocation />
+          <LocationList cities = { cities }/>
     </div>
-  );
+  ); 
+  }
 }
 
 export default App;
